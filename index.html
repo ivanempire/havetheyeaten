@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Have they eaten yet?</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,900" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+	<section id="app" v-bind:class="{green: showEaten}">
+
+		<transition name="fade">
+			<article v-if="!showEaten">
+				<h1>Have they eaten?</h1>
+				<p>A silly page that tells us if Matt and Myles have already eaten, without Ivan, like a bunch of sore losers.</p>
+				<button v-on:click="prime()">Let's find out!</button>
+			</article>
+
+			<article v-else>
+				<h1>Yes, they have!</h1>
+				<p>Once again, without me...I eeerr mean Ivan.</p>
+			</article>
+		</transition>
+
+	</section>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js"></script>
+<script src="js/main.js"></script>
+<!--Did I mention they ate without me?-->
+</html>
